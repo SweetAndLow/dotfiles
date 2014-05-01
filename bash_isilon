@@ -1,0 +1,23 @@
+# Author: Sean Vetter
+# Date: 5/1/2014
+# Description: bash modifications made for Isilon specific tools
+#
+
+alias cribs="ssh svetter@cribsbiox.west.isilon.com"
+alias dog-pools="ssh svetter@dog-pools.west.isilon.com"
+alias work="ssh -xat svetter.west.isilon.com screen -xRR -A -U -O -S wfh"
+
+
+sea()
+{
+    ssh svetter@eng-sea-tmgr$1.west.isilon.com
+}
+
+dur()
+{
+    ssh svetter@eng-nc-tmgr$1.west.isilon.com
+}
+
+topstrings () {
+    strings $1 | sort | uniq -c | sort -n -r | head -n 20
+

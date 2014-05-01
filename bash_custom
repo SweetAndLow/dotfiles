@@ -4,6 +4,9 @@
 # Date: 4/30/2014
 # Description: This is is executed from .bashrc and holds my customizations
 
+# double line prompt with smily faces
+PS1="\[\e[31m\]\w\n\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` \[\e[32m\]\u@\h-->\$ \[\e[0m\]"
+
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
     find . -exec grep -l -s $1 {} \;
