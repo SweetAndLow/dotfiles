@@ -1,0 +1,23 @@
+# $Id:$
+
+# Author: Sean Vetter 
+# Date: 4/30/2014
+# Description: This is is executed from .bashrc and holds my customizations
+
+# qfind - used to quickly find files that contain a string in a directory
+qfind () {
+    find . -exec grep -l -s $1 {} \;
+    return 0
+}
+
+# Custom exports
+# add my scripts to path
+if [ -d $HOME/Documents/scripts ]; then
+    export PATH=$PATH:$HOME/Documents/scripts
+fi
+
+## Set EDITOR to /usr/bin/vim if Vim is installed
+if [ -f `which vim` ]; then
+    export EDITOR=`which vim`
+fi
+
