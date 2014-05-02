@@ -21,6 +21,9 @@ set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events                                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autoload plugins from bundle
+execute pathogen#infect()
+
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 
 " In Makefiles DO NOT use spaces instead of tabs
@@ -37,6 +40,12 @@ set ofu=syntaxcomplete#Complete
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme molokai       " set colorscheme
+
+" Open NERDTree
+autocmd vimenter * NERDTree
+
+" Auto close if NERTTree is only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json

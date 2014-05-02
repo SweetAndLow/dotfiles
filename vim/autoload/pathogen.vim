@@ -1,0 +1,1 @@
+/home/svetter/.vim/bundle/pathogen/autoload/pathogen.vim
