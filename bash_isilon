@@ -20,4 +20,4 @@ dur()
 
 topstrings () {
     strings $1 | sort | uniq -c | sort -n -r | head -n 20
-
+}
