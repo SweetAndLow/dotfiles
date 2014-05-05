@@ -1,7 +1,6 @@
 # Author: Sean Vetter
 # Date: 5/1/2014
 # Description: bash modifications made for Isilon specific tools
-#
 
 alias cribs="ssh svetter@cribsbiox.west.isilon.com"
 alias dog-pools="ssh svetter@dog-pools.west.isilon.com"

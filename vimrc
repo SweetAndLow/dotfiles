@@ -1,13 +1,14 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Filename: .vimrc                                                         "
-" Maintainer: Michael J. Smalley <michaeljsmalley@gmail.com>                 "
-"        URL: http://github.com/michaeljsmalley/dotfiles                     "
+" Maintainer: Sean Vetter <vetters10@msn.com>                                "
+"        URL: http://github.com/SweetAndLow/dotfiles                         "
 "                                                                            "
 "                                                                            "
 " Sections:                                                                  "
 "   01. General ................. General Vim behavior                       "
 "   02. Events .................. General autocmd events                     "
 "   03. Theme/Colors ............ Colors, fonts, etc.                        "
+"     3.1. NERDTree ............. autocmd for NERDTree                       "
 "   04. Vim UI .................. User interface behavior                    "
 "   05. Text Formatting/Layout .. Text, tab, indentation related             "
 "   06. Mapped Commands ......... Mapping fucionality to hot keys            "
@@ -41,11 +42,18 @@ set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme molokai       " set colorscheme
 
-" Open NERDTree
-autocmd vimenter * NERDTree
+" 3.1 NERDree ----------------------------------------------------------------
+" Open NERDTree in every new tab
+autocmd VimEnter * NERDTree
+" Sync NERDTree across all tabs(I think?)
+autocmd BufEnter * NERDTreeMirror
+" Set cursor focus to newly opend tab
+autocmd VimEnter * wincmd w
 
 " Auto close if NERTTree is only window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
+    \ b:NERDTreeType == "primary") | q | endif
+"-----------------------------------------------------------------------------
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json
