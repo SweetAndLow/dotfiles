@@ -66,6 +66,7 @@ autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
 
+" Highlight white space at EOL, this conflicts with OverLength
 highlight WhiteSpaceEOL term=reverse ctermbg=white guibg=white
 match WhiteSpaceEOL /\s\+$/
 
