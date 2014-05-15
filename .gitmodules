@@ -7,3 +7,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "submodules/keepasshttp"]
+	path = submodules/keepasshttp
+	url = https://github.com/pfn/keepasshttp.git
