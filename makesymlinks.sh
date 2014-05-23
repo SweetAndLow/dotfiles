@@ -57,7 +57,11 @@ install_keepass2() {
         if [ -L "$keepass_lib/$file" ]; then
             echo "unlinking $file"
             sudo unlink "$keepass_lib/$file"
+        elif [ -f "$keepass_lib/$file" ]; then
+            echo "Moving $file to $olddir" 
+            sudo mv "$keepass_lib/$file" "$HOME/dotfiles_old/"
         fi
+
         echo "Creating symlink: $file in $keepass_lib"
         sudo ln -s "$dir/submodules/keepasshttp/mono/$file" "$keepass_lib/$file"
     done
