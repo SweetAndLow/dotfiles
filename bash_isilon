@@ -6,17 +6,19 @@ alias cribs="ssh svetter@cribsbiox.west.isilon.com"
 alias dog-pools="ssh svetter@dog-pools.west.isilon.com"
 alias work="ssh -xat svetter.west.isilon.com screen -xRR -A -U -O -S wfh"
 
+makereview() {
+    rbt post -o --guess-summary --guess-description --username=svetter \
+        --tracking-branch=`git branch | grep \* | awk '{ print $NF }'`
+}
 
-sea()
-{
+sea() {
     ssh svetter@eng-sea-tmgr$1.west.isilon.com
 }
 
-dur()
-{
+dur() {
     ssh svetter@eng-nc-tmgr$1.west.isilon.com
 }
 
-topstrings () {
+topstrings() {
     strings $1 | sort | uniq -c | sort -n -r | head -n 20
 }
