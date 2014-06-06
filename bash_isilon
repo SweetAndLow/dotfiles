@@ -2,9 +2,21 @@
 # Date: 5/1/2014
 # Description: bash modifications made for Isilon specific tools
 
+
+# Isilon QA Environment
+export QA=/usr/local/qa
+export QALIB=$QA/lib
+export QALISTS=$QA/lists
+export QA_MNT=/mnt/logs/qa
+#export QATREE=/usr/local/src/qa
+export TOOLS=/usr/local/tools
+export PATH=$PATH:$QA/bin:$QA/tests:$QA/linux/bin:$TOOLS
+
 alias cribs="ssh svetter@cribsbiox.west.isilon.com"
 alias dog-pools="ssh svetter@dog-pools.west.isilon.com"
 alias work="ssh -xat svetter.west.isilon.com screen -xRR -A -U -O -S wfh"
+alias chrome="google-chrome --disk-cache-dir=$HOME/angus/google-chrome-cache --disk-cache-size=335544321" #size is 200
+
 
 makereview() {
     rbt post -o --guess-summary --guess-description --username=svetter \
@@ -12,11 +24,11 @@ makereview() {
 }
 
 sea() {
-    ssh svetter@eng-sea-tmgr$1.west.isilon.com
+    ssh svetter@eng-sea-qavm$1.west.isilon.com
 }
 
 dur() {
-    ssh svetter@eng-nc-tmgr$1.west.isilon.com
+    ssh svetter@eng-dur-qavm$1.west.isilon.com
 }
 
 topstrings() {

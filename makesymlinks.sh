@@ -32,7 +32,7 @@ for file in $files; do
         unlink "$HOME/.$file"
     elif [ -f "$HOME/.$file" -o -d "$HOME/.$file" ]; then
         echo "Moving any existing dotfiles from $HOME to $olddir"
-        mv "$HOME/.$file" "$HOME/dotfiles_old/"
+        mv "$HOME/.$file" "$olddir/"
     fi
 
     echo "Creating symlink to $file in home directory."
@@ -59,7 +59,7 @@ install_keepass2() {
             sudo unlink "$keepass_lib/$file"
         elif [ -f "$keepass_lib/$file" ]; then
             echo "Moving $file to $olddir" 
-            sudo mv "$keepass_lib/$file" "$HOME/dotfiles_old/"
+            sudo mv "$keepass_lib/$file" "$olddir/"
         fi
 
         echo "Creating symlink: $file in $keepass_lib"
