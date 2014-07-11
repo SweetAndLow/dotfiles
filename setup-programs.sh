@@ -21,3 +21,6 @@ sudo add-apt-repository ppa:svn/ppa
 
 # review board tools install, requires python-setuptools
 sudo easy_install -U RBTools
+
+# this is a maybe
+sudo apt-get install ubuntu-restricted-extras
