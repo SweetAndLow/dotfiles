@@ -19,8 +19,7 @@ alias chrome="google-chrome --disk-cache-dir=$HOME/angus/google-chrome-cache --d
 
 
 makereview() {
-    rbt post -o --guess-summary --guess-description --username=svetter \
-        --tracking-branch=`git branch | grep \* | awk '{ print $NF }'`
+    rbt post -o --guess-summary --guess-description --username=svetter --tracking-branch=`git branch | grep \* | awk '{ print $NF }'`
 }
 
 sea() {

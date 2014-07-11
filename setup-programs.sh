@@ -6,7 +6,7 @@
 sudo apt-get -y install git subversion vim pylint nfs-common cifs-utils ssh \
     chromium-browser pepperflashplugin-nonfree djview-plugin keepass2 \
     nautilus-dropbox traceroute mono-complete screen whois irssi rdesktop \
-    python-setuptools curl
+    python-setuptools curl iperf
 
 
 # PPA
@@ -21,3 +21,10 @@ sudo add-apt-repository ppa:svn/ppa
 
 # review board tools install, requires python-setuptools
 sudo easy_install -U RBTools
+
+# wireshark install
+sudo apt-get install wireshark
+# configure wireshark group so users can sniff packets
+sudo dpkg-reconfigure wireshark-common
+# add your user to that group
+sudo usermod -a -G wireshark $USER
