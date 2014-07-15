@@ -98,16 +98,16 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+    . $HOME/.bash_aliases
 fi
 
-if [ -f ~/.bash_custom ]; then
-    . ~/.bash_custom
+if [ -f $HOME/.bash_custom ]; then
+    . $HOME/.bash_custom
 fi
 
-if [ -f ~/.bash_isilon ]; then
-    . ~/.bash_isilon
+if [ -f $HOME/.bash_isilon ]; then
+    . $HOME/.bash_isilon
 fi
 
 # enable programmable completion features (you don't need to enable
