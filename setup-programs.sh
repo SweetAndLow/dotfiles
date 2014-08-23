@@ -6,7 +6,7 @@
 sudo apt-get -y install git subversion vim pylint nfs-common cifs-utils ssh \
     chromium-browser pepperflashplugin-nonfree djview-plugin keepass2 \
     nautilus-dropbox traceroute mono-complete screen whois irssi rdesktop \
-    python-setuptools curl iperf
+    python-setuptools curl iperf libwww-perl
 
 
 # PPA
@@ -32,3 +32,4 @@ sudo usermod -a -G wireshark $USER
 # this is a maybe
 sudo apt-get install ubuntu-restricted-extras
 
+# libwww-perl is installed to get make_qa.pl working
