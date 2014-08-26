@@ -14,7 +14,7 @@ export PATH=$PATH:$QA/bin:$QA/tests:$QA/linux/bin:$TOOLS
 
 alias cribs="ssh svetter@cribsbiox.west.isilon.com"
 alias dog-pools="ssh svetter@dog-pools.west.isilon.com"
-alias work="ssh -xat svetter.west.isilon.com screen -xRR -A -U -O -S wfh"
+alias work="ssh -xat svetter-desktop.west.isilon.com screen -xRR -A -U -O -S wfh"
 alias chrome="google-chrome --disk-cache-dir=$HOME/angus/google-chrome-cache --disk-cache-size=335544321" #size is 200
 
 
