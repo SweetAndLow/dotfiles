@@ -7,8 +7,8 @@
 export QA=/usr/local/qa
 export QALIB=$QA/lib
 export QALISTS=$QA/lists
-export QA_MNT=/mnt/logs/qa
-#export QATREE=/usr/local/src/qa
+export QA_MNT=/mnt/qalogserver/qa
+export QATREE=/usr/local/src/qa
 export TOOLS=/usr/local/tools
 export PATH=$PATH:$QA/bin:$QA/tests:$QA/linux/bin:$TOOLS
 
