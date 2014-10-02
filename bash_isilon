@@ -11,6 +11,8 @@ export QA_MNT=/mnt/qalogserver/qa
 export QATREE=/usr/local/src/qa
 export TOOLS=/usr/local/tools
 export PATH=$PATH:$QA/bin:$QA/tests:$QA/linux/bin:$TOOLS
+export PYTHONPATH=$PYTHONPATH:$QA/bin:$QA/tests:$QALIB:$QA/utils/bin
+
 
 alias cribs="ssh svetter@cribsbiox.west.isilon.com"
 alias dog-pools="ssh svetter@dog-pools.west.isilon.com"
