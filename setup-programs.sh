@@ -6,7 +6,11 @@
 sudo apt-get -y install git subversion vim pylint nfs-common cifs-utils ssh \
     chromium-browser pepperflashplugin-nonfree djview-plugin keepass2 \
     nautilus-dropbox traceroute mono-complete screen whois irssi rdesktop \
-    python-setuptools curl iperf libwww-perl
+    python-setuptools curl iperf 
+
+#work qa packages:
+python-pygresql python-mysqldb libwww-perl (postgresql python-pexpect) #optional because i don't konw where they are used, in parens
+
 
 
 # PPA
