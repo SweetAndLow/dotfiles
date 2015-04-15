@@ -4,12 +4,16 @@
 # a new ubuntu computer. This isn't a script just yet.
 
 sudo apt-get -y install git subversion vim pylint nfs-common cifs-utils ssh \
-    chromium-browser pepperflashplugin-nonfree djview-plugin keepass2 \
-    nautilus-dropbox traceroute mono-complete screen whois irssi rdesktop \
-    python-setuptools curl iperf 
+    keepass2 xdotool traceroute whois irssi rdesktop python-setuptools curl \
+    iperf nfs-kernel-server tmux
 
 #work qa packages:
-python-pygresql python-mysqldb libwww-perl (postgresql python-pexpect) #optional because i don't konw where they are used, in parens
+# vm_mgr requires this
+python-pygresql
+# make_cluster.py needs this
+python-mysqldb
+
+libwww-perl (postgresql python-pexpect) #optional because i don't konw where they are used, in parens
 
 
 
