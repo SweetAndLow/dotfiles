@@ -44,11 +44,13 @@ colorscheme molokai       " set colorscheme
 
 " 3.1 NERDree ----------------------------------------------------------------
 " Open NERDTree in every new tab
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 " Sync NERDTree across all tabs(I think?)
 autocmd BufEnter * NERDTreeMirror
 " Set cursor focus to newly opend tab
 autocmd VimEnter * wincmd w
+" Shortcut
+map <C-n> :NERDTreeToggle<CR>
 
 " Auto close if NERTTree is only window left
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&

@@ -5,7 +5,7 @@
 
 sudo apt-get -y install git subversion vim pylint nfs-common cifs-utils ssh \
     keepass2 xdotool traceroute whois irssi rdesktop python-setuptools curl \
-    iperf nfs-kernel-server tmux
+    iperf nfs-kernel-server tmux nmap python-unittest2
 
 #work qa packages:
 # vm_mgr requires this
